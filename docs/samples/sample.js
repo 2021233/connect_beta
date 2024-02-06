@@ -1,13 +1,17 @@
 const cameraWidth = 300;
 const cameraHeight = 400;
+let mode = "";
 
 const cameraInitSmartphoneSupport = () => {
   const video = document.getElementById("camera");
 
   //スマホからの閲覧か
   const isMobile = navigator.userAgent.match(/iPhone|Android/);
-  let mode;
-  mode === "user" ? "enviroment" : "user";
+  if (mode == "user") {
+    mode = "enviroment";
+  } else {
+    mode = "user";
+  }
 
   const cameraSetting = {
     audio: false,
@@ -26,6 +30,7 @@ const cameraInitSmartphoneSupport = () => {
       console.log(mediaStream);
       console.log(cameraSetting);
       console.log(video.srcObject);
+      console.log("mode:" + mode);
     })
     .catch((err) => {
       console.log(err.toString());
