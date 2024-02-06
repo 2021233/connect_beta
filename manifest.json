@@ -5,12 +5,11 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#fff",
-    "description": "読みやすいハッカーニュースアプリです。",
+    "description": "自分のイメージをより直感的に。AIを活用した次世代ヘアスタイルアプリ「HAIRATION」。シミュレーションにより、理想の髪型へ。実現性の高い美容室を予約可能です。AI分析から現在の髪の状態、最適なヘアケア商品を提示することもできます。",
     "icons": [
-      {
-        "src": "icon/icon.svg",
-        "type": "image/svg"
-      }
+        {
+            "src": "icon/icon.svg",
+            "type": "image/svg"
+        }
     ]
-  }
-  
+}
