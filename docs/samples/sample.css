@@ -68,6 +68,10 @@ body#body.forced_background.white {
     background-color: #fff!important;
 }
 
+canvas {
+    display: none;
+}
+
 /* root-------------------------------------- */
 /* ------------------------------------------ */
 /* media------------------------------------- */

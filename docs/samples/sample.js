@@ -55,24 +55,17 @@ const shoot = () => {
     cameraHeight // 描画縦サイズ
   );
 
-  localStorage.setItem(
-    "took",
-    ctx.getImageData(0, 0, cameraWidth, cameraHeight)
-  );
+  console.log(canvas.toDataURL("image/jpeg", 1.0));
+
+  localStorage.setItem("took", canvas.toDataURL("image/jpeg", 1.0));
 
   //   const getImg = ctx.getImageData(0, 0, cameraWidth, cameraHeight);
-  //   console.log(ctx);
-  //   console.log(getImg);
+  const getImg = localStorage.getItem("took");
+  console.log(getImg);
 
-  //   const newCanvas = document.createElement("canvas");
-  //   document.querySelector(".wrapper:last-of-type").appendChild(newCanvas);
-  //   newCanvas.width = cameraWidth;
-  //   newCanvas.height = cameraHeight;
-  //   const cty = newCanvas.getContext("2d", {
-  //     willReadFrequently: true,
-  //   });
-
-  //   cty.putImageData(getImg, 0, 0);
+  const newImg = new Image();
+  newImg.src = getImg;
+  document.querySelector(".wrapper:last-of-type").appendChild(newImg);
 };
 
 window.addEventListener("load", () => {
