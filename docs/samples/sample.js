@@ -13,7 +13,7 @@ const cameraInitSmartphoneSupport = () => {
             //スマホの場合は縦横を逆に設定する
             width: isMobile ? cameraHeight : cameraWidth,
             height: isMobile ? cameraWidth : cameraHeight,
-            facingMode: "user",
+            facingMode: "environment",
         }
     }
 
