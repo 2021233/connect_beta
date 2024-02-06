@@ -42,7 +42,9 @@ const shoot = () => {
   canvas.width = cameraWidth;
   canvas.height = cameraHeight;
   //描画用オブジェクトを取得
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d", {
+    willReadFrequently: true,
+  });
 
   //描画する
   ctx.drawImage(
@@ -53,7 +55,24 @@ const shoot = () => {
     cameraHeight // 描画縦サイズ
   );
 
-  console.log(ctx.getImageData(0, 0, ctx.width, ctx.height));
+  localStorage.setItem(
+    "took",
+    ctx.getImageData(0, 0, cameraWidth, cameraHeight)
+  );
+
+  //   const getImg = ctx.getImageData(0, 0, cameraWidth, cameraHeight);
+  //   console.log(ctx);
+  //   console.log(getImg);
+
+  //   const newCanvas = document.createElement("canvas");
+  //   document.querySelector(".wrapper:last-of-type").appendChild(newCanvas);
+  //   newCanvas.width = cameraWidth;
+  //   newCanvas.height = cameraHeight;
+  //   const cty = newCanvas.getContext("2d", {
+  //     willReadFrequently: true,
+  //   });
+
+  //   cty.putImageData(getImg, 0, 0);
 };
 
 window.addEventListener("load", () => {
