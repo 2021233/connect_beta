@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,23 @@
     <link rel="stylesheet" href="sample.css">
     <title>sample</title>
 </head>
+
 <body>
     <h1>sample</h1>
+
+    <div class="wrapper">
+        <input type="button" value="awake" onclick="cameraInitSmartphoneSupport()" id="awake">
+        <label for="awake" class="visual_hidden">awake</label>
+        <input type="button" value="shot" id="shot">
+        <label for="shot" class="visual_hidden">shot</label>
+    </div>
+
+    <div class="wrapper">
+        <video id="camera" autoplay muted playsinline></video>
+        <canvas id="canvas" wcrossorigin="anonymous">   </canvas>
+    </div>
+
+    <script src="sample.js"  type="text/javascript" defer></script>
 </body>
+
 </html>
