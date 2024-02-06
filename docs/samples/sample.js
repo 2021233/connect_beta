@@ -6,7 +6,8 @@ const cameraInitSmartphoneSupport = () => {
 
   //スマホからの閲覧か
   const isMobile = navigator.userAgent.match(/iPhone|Android/);
-  let mode = mode === "user" ? "enviroment" : "user";
+  let mode;
+  mode === "user" ? "enviroment" : "user";
 
   const cameraSetting = {
     audio: false,
