@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "HAIRATION",
+    "short_name": "HAIRATION",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "読みやすいハッカーニュースアプリです。",
+    "icons": [
+      {
+        "src": "icon/icon.svg",
+        "type": "image/svg"
+      }
+    ]
+  }
+  
