@@ -1,5 +1,4 @@
 {
-    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "name": "HAIRATION",
     "short_name": "HAIRATION",
     "start_url": ".",
