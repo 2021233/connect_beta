@@ -1,17 +1,17 @@
 const cameraWidth = 300;
 const cameraHeight = 400;
-let mode = "";
+// let mode = ""; カメラ切り替えは後で実装
 
 const cameraInitSmartphoneSupport = () => {
   const video = document.getElementById("camera");
 
   //スマホからの閲覧か
   const isMobile = navigator.userAgent.match(/iPhone|Android/);
-  if (mode == "user") {
-    mode = "enviroment";
-  } else {
-    mode = "user";
-  }
+  //   if (mode == "user") {
+  //     mode = "enviroment";
+  //   } else {
+  //     mode = "user";
+  //   }
 
   const cameraSetting = {
     audio: false,
@@ -19,7 +19,7 @@ const cameraInitSmartphoneSupport = () => {
       //スマホの場合は縦横を逆に設定する
       width: isMobile ? cameraHeight : cameraWidth,
       height: isMobile ? cameraWidth : cameraHeight,
-      facingMode: mode,
+      facingMode: "user",
     },
   };
 
@@ -27,10 +27,6 @@ const cameraInitSmartphoneSupport = () => {
     .getUserMedia(cameraSetting)
     .then((mediaStream) => {
       video.srcObject = mediaStream;
-      console.log(mediaStream);
-      console.log(cameraSetting);
-      console.log(video.srcObject);
-      console.log("mode:" + mode);
     })
     .catch((err) => {
       console.log(err.toString());
@@ -56,4 +52,10 @@ const shoot = () => {
     cameraWidth, // 描画横サイズ
     cameraHeight // 描画縦サイズ
   );
+
+  console.log(ctx.getImageData(0, 0, ctx.width, ctx.height));
 };
+
+window.addEventListener("load", () => {
+  awake.click();
+});
