@@ -20,6 +20,7 @@ const cameraInitSmartphoneSupport = () => {
     navigator.mediaDevices.getUserMedia(cameraSetting)
         .then((mediaStream) => {
             video.srcObject = mediaStream;
+            console.log(mediaStream)
         })
         .catch((err) => {
             console.log(err.toString());
