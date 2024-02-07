@@ -31,6 +31,9 @@ const shoot = () => {
   ctx.drawImage(video, 0, 0, 300, 400);
 
   localStorage.setItem("took", canvas.toDataURL("image/jpeg", 1.0));
+  setTimeout(() => {
+    window.location.href = "result.html";
+  }, 1000);
 };
 
 document.body.addEventListener("DOMContentLoaded", cameraInit());
