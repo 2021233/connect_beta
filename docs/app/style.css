@@ -1,0 +1,200 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --bgc: #f1f1f1;
+    --txc: #474747;
+    --light-accent: #d7a079;
+    --dark-accent: #4b3e2f;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    min-height: 0vh;
+    color: var(--txc);
+    font-family: 'Zen Maru Gothic', serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-size: unset;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+    user-select: none;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    display: block;
+}
+
+.visual-hidden {
+    display: none;
+}
+
+*.forced_hidden {
+    display: none !important;
+}
+
+body {
+    width: min(100%, 1920px);
+    min-height: 100vh;
+    height: auto;
+    position: relative;
+    padding-bottom: var(--footer);
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--bgc);
+    display: flex;
+    flex-direction: column;
+}
+
+/* root-------------------------------------- */
+/* ------------------------------------------ */
+/* common------------------------------------ */
+
+.menu {
+    height: 12.8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 5% 7%;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-82.2vw);
+    margin: auto;
+    background-color: var(--light-accent);
+    width: 264.4vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 4px 1px rgba(0 0 0 /.25);
+}
+
+.menu a {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    width: 18vw;
+    font-size: 1.2rem;
+}
+
+.menu a svg {
+    width: 2.4rem;
+    height: auto;
+    margin-bottom: .4em;
+}
+
+.menu .diagnosis {
+    width: 20vw;
+    font-size: 1.6rem;
+}
+
+.menu .diagnosis svg {
+    width: 3.6rem;
+}
+
+/* common------------------------------------ */
+/* ------------------------------------------ */
+/* index------------------------------------- */
+
+body.index {
+    justify-content: end;
+}
+
+.index video {
+    width: 100%;
+    aspect-ratio: 3/4;
+    transform: scaleX(-1);
+}
+
+.index .tool {
+    height: 19.2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.index .tool button {
+    border: 1px solid #000;
+    width: 15vw;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.index .tool .cameraRoll {
+    border-radius: 2vw;
+}
+
+.index .tool .cameraRoll img {
+    object-fit: cover;
+}
+
+.index .tool label[for=shoot] {
+    width: 20vw;
+    aspect-ratio: 1;
+    border: 4px solid var(--dark-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index .tool label[for=shoot]::before {
+    content: '';
+    width: 85%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid var(--dark-accent);
+    transition: all .1s ease-in;
+}
+
+.index .tool label[for=shoot]:active::before {
+    border: none;
+    background-color: var(--light-accent);
+    width: 100%;
+}
+
+.index .tool .switchCamera {
+    border-radius: 50%;
+}
+
+.index .tool .switchCamera svg {
+    width: 60%;
+    height: auto;
+}
