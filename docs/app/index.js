@@ -4,8 +4,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const cameraSetting = {
     audio: false,
     video: {
-      width: 400,
-      height: 300,
+      width: 300,
+      height: 400,
       factingmode: "user",
     },
   };
