@@ -1,4 +1,4 @@
-const cameraInit = () => {
+window.addEventListener("DOMContentLoaded", () => {
   const video = document.querySelector("#camera");
 
   const cameraSetting = {
@@ -18,9 +18,9 @@ const cameraInit = () => {
     .catch((e) => {
       console.log(e.toString());
     });
-};
+});
 
-const shoot = () => {
+document.querySelector("label[for=shoot]").addEventListener("touchend", () => {
   const video = document.querySelector("#camera");
   const canvas = document.querySelector("canvas");
 
@@ -34,7 +34,4 @@ const shoot = () => {
   setTimeout(() => {
     window.location.href = "result.html";
   }, 1000);
-};
-
-document.body.addEventListener("DOMContentLoaded", cameraInit());
-document.querySelector("label[for=shoot]").addEventListener("touchend", shoot);
+});
