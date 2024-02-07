@@ -175,10 +175,26 @@ body {
 /* ------------------------------------------ */
 /* index------------------------------------- */
 
+.index .videoContainer {
+    width: 100%;
+    aspect-ratio: 3/4;
+    position: relative;
+}
+
 .index video {
     width: 100%;
     aspect-ratio: 3/4;
     transform: scaleX(-1);
+}
+
+.index .videoContainer img {
+    position: absolute;
+    z-index: 60;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .index .tool {
@@ -275,7 +291,7 @@ body.result {
     --x: 0px;
     --y: 0px;
     position: absolute;
-    width: 70%;
+    width: 59%;
     height: auto;
     top: calc(30% + var(--y));
     left: calc(15% + var(--x));
@@ -404,4 +420,38 @@ body.result {
 
 /* diagnosis--------------------------------- */
 /* ------------------------------------------ */
-/* simuration-------------------------------- */
+/* mypage------------------------------------ */
+
+.mypage .content .card {
+    width: 90%;
+    padding: 2rem 1.4rem 6rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mypage .content .card h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.mypage .content .card a {
+    width: 80%;
+    height: 3rem;
+    padding: 1rem 1rem;
+    background-color: var(--bgc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.mypage .content .card a span:first-of-type {
+    width: 60%;
+    text-align: left;
+}
