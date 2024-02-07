@@ -34,6 +34,7 @@ h5,
 h6 {
 
     font-size: unset;
+    font-weight: unset;
 }
 
 a,
@@ -162,6 +163,12 @@ body {
     right: 0;
     bottom: -0.3em;
     margin: auto;
+}
+
+.content {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
 }
 
 /* common------------------------------------ */
@@ -324,9 +331,6 @@ body.result {
 /* simuration-------------------------------- */
 
 .simuration .content {
-    width: 100%;
-    height: 80vh;
-    overflow-y: scroll;
     display: grid;
     grid-template-columns: repeat(3, calc(100vw / 3));
     grid-template-rows: calc(100vw / 3);
@@ -338,8 +342,66 @@ body.result {
     object-fit: cover;
 }
 
-
-
 /* simuration-------------------------------- */
 /* ------------------------------------------ */
-/* result------------------------------------ */
+/* diagnosis--------------------------------- */
+
+.diagnosis .content img {
+    width: 70%;
+    height: auto;
+    border-radius: 2px;
+    /* box-shadow: 2px 2px 2px 0px rgba(0 0 0 / .25); */
+    margin: 0 auto;
+}
+
+.diagnosis .content .card {
+    --excl: 4rem;
+
+    width: 90%;
+    padding: 1.2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 3rem auto;
+    box-shadow: 2px 2px 2px 0px rgba(0 0 0 / .25);
+}
+
+.diagnosis .content .card .wrapper {
+    display: flex;
+    font-size: 2.4rem;
+    text-align: left;
+    width: 90%;
+    margin-left: 10%;
+}
+
+.diagnosis .content .card .wrapper span {
+    width: var(--excl);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--light-accent);
+    color: #fff;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.diagnosis .content .card .wrapper span::after {
+    content: '!';
+    font-weight: bold;
+}
+
+.diagnosis .content .card p {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    padding-left: calc(var(--excl) + 1rem);
+}
+
+/* diagnosis--------------------------------- */
+/* ------------------------------------------ */
+/* simuration-------------------------------- */
